@@ -1,0 +1,59 @@
+@import 'variables.scss';
+
+.SplashScreen {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .splash-screen-overlay {
+    position: absolute;
+    z-index: 1;
+    background-color: #000000;
+    opacity: 0.8;
+    width: 100%;
+    height: 100vh;
+    visibility: initial;
+    transition: opacity 500ms ease-out, visibility 500ms ease-out;
+
+    &.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  .splash-screen-frame {
+    position: absolute;
+    z-index: 3;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    left: 0;
+    top: 0;
+    visibility: initial;
+    transition: left 400ms ease-out, top 400ms ease-out,
+      visibility 400ms ease-out 350ms;
+
+    &.hidden {
+      visibility: hidden;
+      left: -100%;
+    }
+
+    @media screen and (min-width: 992px) {
+      &.hidden {
+        top: -100vh;
+        left: 0;
+      }
+    }
+  }
+
+  #get-started-button {
+    margin: 40px 0px;
+    width: 100%;
+    padding: 21px 24px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}

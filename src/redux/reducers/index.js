@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
-import SimpleReducer from 'redux/reducers/SimpleReducer';
+import SplashScreenReducer from './SplashScreenReducer';
+import SettingsReducer from './SettingsReducer';
 
 export default combineReducers({
-  simpleReducer: SimpleReducer,
+  splashScreenIsDisplayed : SplashScreenReducer,
+  settingsFrameIsDisplayed : SettingsReducer,
 });

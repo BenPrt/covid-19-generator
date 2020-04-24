@@ -5,6 +5,9 @@ import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 
+import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
+import muiTheme from 'muiTheme';
+
 import Reducers from 'redux/reducers';
 import App from './components/App/App';
 
@@ -15,9 +18,11 @@ const store = createStore(Reducers, composeEnhancers(applyMiddleware(thunk)));
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <MuiThemeProvider theme={muiTheme}>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </MuiThemeProvider>
   </React.StrictMode>,
   document.getElementById('root'),
 );

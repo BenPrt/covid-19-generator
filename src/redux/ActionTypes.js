@@ -1,5 +1,8 @@
 export const ActionTypes = {
-  simpleAction: 'SIMPLE_ACTION',
+  // Splash Screen Actions
+  hideSplashScreen: 'HIDE_SPLASH_SCREEN',
+  // SettingsFrame Actions
+  toggleSettings: 'TOGGLE_SETTINGS',
 };
 
 export default ActionTypes;

@@ -8,7 +8,7 @@ import * as serviceWorker from './serviceWorker';
 import Reducers from 'redux/reducers';
 import App from './components/App/App';
 
-import './index.css';
+import './index.scss';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(Reducers, composeEnhancers(applyMiddleware(thunk)));

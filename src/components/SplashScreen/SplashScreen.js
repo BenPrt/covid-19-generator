@@ -10,6 +10,7 @@ import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import { hideSplashScreen } from 'redux/actions/SplashScreenActions';
 import './SplashScreen.scss';
 
+import SplashScreenForm from 'components/SplashScreenForm/SplashScreenForm';
 
 function SplashScreen() {
   const isSplashScreenDisplayed = useSelector(
@@ -33,20 +34,8 @@ function SplashScreen() {
         <Container fluid>
           <Row className="justify-content-center">
             <Col xs={12} md={10} xl={6}>
-              <Container>
-                <Row className="justify-content-center">
-                  <Col xs={10} md={6}>
-                    <Button
-                      id="get-started-button"
-                      variant="contained"
-                      color="primary"
-                      onClick={() => dispatch(hideSplashScreen())}
-                    >
-                      Submit <ArrowForwardIcon />
-                    </Button>
-                  </Col>
-                </Row>
-              </Container>
+              <h2 id="splash-screen-title">Entrez vos informations :</h2>
+              <SplashScreenForm />
             </Col>
           </Row>
         </Container>

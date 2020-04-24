@@ -1,13 +1,10 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Button from '@material-ui/core/Button';
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
-import { hideSplashScreen } from 'redux/actions/SplashScreenActions';
 import './SplashScreen.scss';
 
 import SplashScreenForm from 'components/SplashScreenForm/SplashScreenForm';
@@ -16,8 +13,6 @@ function SplashScreen() {
   const isSplashScreenDisplayed = useSelector(
     (state) => state.splashScreenIsDisplayed,
   );
-
-  const dispatch = useDispatch();
 
   return (
     <div className="SplashScreen">

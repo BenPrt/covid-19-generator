@@ -8,7 +8,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
-import { hideSplashScreen } from 'redux/actions/SplashScreenActions';
+import { submitSplashScreenForm } from 'redux/actions/SplashScreenActions';
 import './SplashScreenForm.scss';
 
 function SplashScreenForm() {
@@ -169,8 +169,7 @@ function SplashScreenForm() {
         city: cityValue,
         postalCode: postalCodeValue,
       };
-      alert(JSON.stringify(values));
-      dispatch(hideSplashScreen());
+      dispatch(submitSplashScreenForm(values));
     }
   };
 

@@ -10,6 +10,7 @@ import './App.scss';
 import SplashScreen from 'components/SplashScreen/SplashScreen';
 import SettingsPanel from 'components/SettingsPanel/SettingsPanel';
 import Header from 'components/Header/Header';
+import { fetchData } from 'redux/actions/PersonnalInformationActions';
 
 function App() {
   const dispatch = useDispatch();
@@ -28,6 +29,8 @@ function App() {
     };
   
     initAppViewPortHeight();
+
+    dispatch(fetchData());
   }, [dispatch]);
 
   return (

@@ -11,6 +11,7 @@ import SplashScreen from 'components/SplashScreen/SplashScreen';
 import SettingsPanel from 'components/SettingsPanel/SettingsPanel';
 import Header from 'components/Header/Header';
 import { fetchData } from 'redux/actions/PersonnalInformationActions';
+import Loader from 'components/Loader/Loader';
 
 function App() {
   const dispatch = useDispatch();
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <div className="App">
+      <Loader />
       <SplashScreen />
       <SettingsPanel />
       <Container fluid>

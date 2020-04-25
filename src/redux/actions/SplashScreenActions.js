@@ -8,6 +8,7 @@ import {
   updateCityValue,
   updatePostalCodeValue,
 } from './PersonnalInformationActions';
+import { toggleLoader } from './LoaderActions';
 
 // - Action dispatched to hide the splash screen
 export const hideSplashScreen = () => {
@@ -16,6 +17,8 @@ export const hideSplashScreen = () => {
     displayValue: false,
   };
 };
+
+// - Thunk initalizing splash screen display
 export const initSplashScreenStatus = () => {
   return (dispatch, getState) => {
     const areInformationAlreadyInited =
@@ -29,6 +32,9 @@ export const initSplashScreenStatus = () => {
     if (areInformationAlreadyInited) {
       dispatch(hideSplashScreen());
     }
+    setTimeout(() => {
+      dispatch(toggleLoader(false));
+    }, 2000);
   };
 };
 

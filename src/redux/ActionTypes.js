@@ -1,4 +1,6 @@
 export const ActionTypes = {
+  // Loader Actions
+  toggleLoader: 'TOGGLE_LOADER',
   // Splash Screen Actions
   hideSplashScreen: 'HIDE_SPLASH_SCREEN',
   // SettingsFrame Actions

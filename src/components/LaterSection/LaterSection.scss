@@ -1,0 +1,47 @@
+@import 'variables.scss';
+
+.LaterSection {
+  margin: 0px 46px;
+  padding: 16px 0px;
+  border-bottom: 1px solid $light-grey;
+  display: flex;
+  flex-direction: column;
+
+  #later-section-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    #later-section-title {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 30px;
+    }
+
+    .later-section-header-icon{
+      transform : rotate(0deg);  
+      transition : transform 400ms ease-in;
+
+      &.opened{
+        transform : rotate(180deg);  
+      }
+    }
+  }
+
+  .later-section-content{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 400ms ease-out 0s, padding-bottom 400ms ease-out 0s;
+
+    &.displayed {
+      max-height: 150px;
+      padding-bottom: 32px;
+    }
+  }
+}

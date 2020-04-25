@@ -41,7 +41,7 @@ function SettingsPanel() {
           >
             <ArrowBackIcon />
           </IconButton>
-          <h2 id="settings-frame-title">Settings</h2>
+          <h2 id="settings-frame-title">Paramètres</h2>
         </div>
         <SettingsContent />
       </div>

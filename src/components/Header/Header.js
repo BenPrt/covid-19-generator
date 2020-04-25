@@ -15,7 +15,7 @@ function Header() {
 
   return (
     <div className="Header">
-      <h1>Welcome</h1>
+      <h1>Générer une attestation</h1>
       <IconButton
         aria-label="settings"
         onClick={handleToggleSettings.bind(this)}

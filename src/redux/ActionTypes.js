@@ -14,6 +14,9 @@ export const ActionTypes = {
   setCityValue: 'SET_CITY_VALUE',
   setPostalCodeValue: 'SET_POSTAL_CODE_VALUE',
   flushData: 'FLUSH_DATA',
+  // Sections display Actions
+  toggleNowSection: 'TOGGLE_NOW_SECTION',
+  toggleLaterSection: 'TOGGLE_LATER_SECTION',
 };
 
 export default ActionTypes;

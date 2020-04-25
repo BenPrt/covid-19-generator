@@ -31,12 +31,16 @@
     overflow-y: auto;
 
     @media screen and (min-width: 768px) {
+      width: 70%;
+      right: -70%;
+    }
+    @media screen and (min-width: 992px) {
       width: 50%;
       right: -50%;
     }
-    @media screen and (min-width: 992px) {
-      width: 30%;
-      right: -30%;
+    @media screen and (min-width: 1200px) {
+      width: 40%;
+      right: -40%;
     }
 
     &.displayed {

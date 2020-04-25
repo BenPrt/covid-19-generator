@@ -34,6 +34,9 @@ export default (state = initialState, action) => {
     // Setting the postal code value
     case ActionTypes.setPostalCodeValue:
       return { ...state, postalCode: action.postalCode };
+    // Erasing all the personnal information
+    case ActionTypes.flushData:
+      return initialState;
     default:
       return state;
   }

@@ -6,6 +6,7 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 import './SettingsPanel.scss';
 import { toggleSettings } from 'redux/actions/SettingsActions';
+import SettingsContent from 'components/SettingsContent/SettingsContent';
 
 function SettingsPanel() {
   const isSettingsPanelDisplayed = useSelector(
@@ -42,6 +43,7 @@ function SettingsPanel() {
           </IconButton>
           <h2 id="settings-frame-title">Settings</h2>
         </div>
+        <SettingsContent />
       </div>
     </div>
   );

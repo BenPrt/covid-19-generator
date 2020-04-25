@@ -21,7 +21,7 @@ function Loader() {
             <Col xs={5} md={3} xl={1}>
               <img
                 id="loader-spinner"
-                alt="covid-19 loading image"
+                alt="covid-19 loading"
                 src={LoaderImage}
               />
             </Col>

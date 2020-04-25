@@ -13,6 +13,7 @@ export const ActionTypes = {
   setAddressValue: 'SET_ADDRESS_VALUE',
   setCityValue: 'SET_CITY_VALUE',
   setPostalCodeValue: 'SET_POSTAL_CODE_VALUE',
+  flushData: 'FLUSH_DATA',
 };
 
 export default ActionTypes;

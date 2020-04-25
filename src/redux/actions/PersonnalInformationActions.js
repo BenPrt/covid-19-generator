@@ -148,6 +148,52 @@ export const fetchPostalCodeValue = () => {
   };
 };
 
+// Thunk updating a specific field with a key/value passed in parameter
+export const updateField = (key, value) => {
+  return (dispatch) => {
+    switch (key) {
+      case 'name':
+        dispatch(updateNameValue(value));
+        break;
+      case 'surname':
+        dispatch(updateSurnameValue(value));
+        break;
+      case 'birthday':
+        dispatch(updateBirthdayValue(value));
+        break;
+      case 'birthPlace':
+        dispatch(updateBirthPlaceValue(value));
+        break;
+      case 'address':
+        dispatch(updateAddressValue(value));
+        break;
+      case 'city':
+        dispatch(updateCityValue(value));
+        break;
+      case 'postalCode':
+        dispatch(updatePostalCodeValue(value));
+        break;
+      default:
+        break;
+    }
+  };
+};
+
+// Action and thunk deleting all the stored personnal information
+export const flushPersonnalInformation = () => {
+  return {
+    type: ActionTypes.flushData,
+  };
+};
+export const erasePersonnalInformation = () => {
+  return (dispatch) => {
+    localStorage.clear();
+    dispatch(flushPersonnalInformation());
+    document.location.reload(true);
+  };
+};
+
+// Thunk fetching all the stored informations from local storage
 export const fetchData = () => {
   return (dispatch) => {
     dispatch(fetchNameValue());

@@ -18,7 +18,7 @@ function Loader() {
       <div className={`loader-frame ${isLoaderDisplayed ? '' : 'hidden'}`}>
         <Container fluid>
           <Row className="justify-content-center">
-            <Col xs={6} md={4} xl={1}>
+            <Col xs={5} md={3} xl={1}>
               <img
                 id="loader-spinner"
                 alt="covid-19 loading image"

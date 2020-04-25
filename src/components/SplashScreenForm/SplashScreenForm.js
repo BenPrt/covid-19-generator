@@ -158,7 +158,8 @@ function SplashScreenForm() {
   };
 
   // Form submission handler
-  const handleFormSubmit = () => {
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
     if (formIsCorrect()) {
       const values = {
         name: nameValue,
@@ -177,7 +178,7 @@ function SplashScreenForm() {
     <div className="SplashScreenForm">
       <Container>
         <Row className="justify-content-center">
-          <Col xs={10} md={6}>
+          <Col xs={10} md={8} xl={6}>
             <form
               id="splash-screen-form"
               onSubmit={handleFormSubmit.bind(this)}
@@ -261,7 +262,7 @@ function SplashScreenForm() {
                 id="get-started-button"
                 variant="contained"
                 color="primary"
-                onClick={handleFormSubmit.bind(this)}
+                type="submit"
               >
                 Valider <ArrowForwardIcon />
               </Button>

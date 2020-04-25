@@ -1,0 +1,21 @@
+@import 'variables.scss';
+
+.ReasonGenerationButton {
+  display: flex;
+  align-items: center;
+  border: 1px solid $light-grey;
+  padding : 8px 0px;
+  margin-bottom : 12px;
+  cursor: pointer;
+
+  .reason-icon-wrapper {
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .reason-description {
+    width: calc(100% - 48px);
+    padding : 0px 8px;
+  }
+}

@@ -3,8 +3,11 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 
+import ReasonsList from 'ressources/ReasonsList';
+
 import './NowSection.scss';
 import { toggleNowSection } from 'redux/actions/SectionsActions';
+import ReasonGenerationButton from 'components/ReasonGenerationButton/ReasonGenerationButton';
 
 function NowSection() {
   const dispatch = useDispatch();
@@ -15,10 +18,6 @@ function NowSection() {
 
   const handleNowSectionToggle = () => {
     dispatch(toggleNowSection(!isNowSectionDisplayed));
-  };
-
-  const handleGenerateNow = () => {
-    dispatch();
   };
 
   return (
@@ -44,6 +43,9 @@ function NowSection() {
         <h3 id="now-section-content-subtitle">
           Sélectionner le motif de votre sortie pour générer votre attestation :
         </h3>
+        {ReasonsList.map((reason, index) => (
+          <ReasonGenerationButton key={index} reason={reason} />
+        ))}
       </div>
     </div>
   );

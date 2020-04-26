@@ -4,13 +4,13 @@ import { useDispatch } from 'react-redux';
 import { Icon } from '@material-ui/core';
 
 import './ReasonGenerationButton.scss';
+import { generatePDFFile } from 'redux/actions/GenerationActions';
 
 function ReasonGenerationButton(props) {
   const dispatch = useDispatch();
 
-  const handleGenerateNow = () => {
-    alert(props.reason.name);
-    // dispatch();
+  const handleGeneratePDF = () => {
+    dispatch(generatePDFFile(props.reason.name));
   };
 
   return (
@@ -18,7 +18,7 @@ function ReasonGenerationButton(props) {
       className="ReasonGenerationButton"
       role="button"
       tabIndex={0}
-      onClick={handleGenerateNow.bind(this)}
+      onClick={handleGeneratePDF.bind(this)}
     >
       <div className="reason-icon-wrapper">
         <Icon className="reason-icon">{props.reason.icon}</Icon>

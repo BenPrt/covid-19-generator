@@ -4,6 +4,7 @@ import moment from 'moment';
 const initialState = () => ({
   outingDate: moment().format('YYYY-MM-DD'),
   outingTime: moment().format('hh:mm'),
+  generationDate: moment().format('YYYY-MM-DD'),
   generationTime: moment().subtract(8, 'minutes').format('hh:mm'),
 });
 
@@ -15,6 +16,7 @@ export default (state = initialState(), action) => {
       return {
         ...state,
         outingDate: action.outingDateValue,
+        generationDate: action.outingDatevalue,
       };
     // Setting the outing value
     case ActionTypes.setOutingTimeValue:

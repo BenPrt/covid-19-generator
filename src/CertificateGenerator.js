@@ -1,6 +1,7 @@
 import pdfBase from './ressources/certificate.pdf';
 import { PDFDocument, StandardFonts } from 'pdf-lib';
 import QRCode from 'qrcode';
+import moment from 'moment';
 
 class CertificateGenerator {
   downloadPdf = async (values) => {
@@ -24,7 +25,7 @@ class CertificateGenerator {
   };
 
   generatePdf = async (values) => {
-    const {
+    let {
       name,
       surname,
       birthday,
@@ -38,6 +39,10 @@ class CertificateGenerator {
       generationTime,
       reason,
     } = values;
+
+    birthday = this.formatDate(birthday);
+    outingDate = this.formatDate(outingDate);
+    generationDate = this.formatDate(generationDate);
 
     const data = [
       `Cree le: ${generationDate} a ${generationTime}`,
@@ -94,7 +99,7 @@ class CertificateGenerator {
         break;
     }
 
-    drawText(city, 111, 226, 7);
+    drawText(city, 111, 226);
 
     drawText(outingDate, 92, 200);
     drawText(outingTime.split(':')[0], 200, 201);
@@ -141,6 +146,10 @@ class CertificateGenerator {
       console.error(err);
     }
   };
+
+  formatDate= (date) => {
+    return moment(date, 'YYYY-MM-DD').format('DD/MM/YYYY');
+  }
 }
 
 export default CertificateGenerator;

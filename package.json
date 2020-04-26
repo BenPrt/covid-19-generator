@@ -1,10 +1,10 @@
 {
   "name": "covid-19-generator",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "homepage": ".",
   "scripts": {
-    "start": "npm run lint && react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "lint": "eslint .",
     "start:heroku": "npm run build && node server.js"

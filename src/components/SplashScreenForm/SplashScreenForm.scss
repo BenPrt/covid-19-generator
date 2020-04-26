@@ -1,0 +1,19 @@
+@import 'variables.scss';
+
+.SplashScreenForm {
+  #splash-screen-form {
+    .splash-screen-form-input {
+      width: 100%;
+      padding-bottom : 16px;
+    }
+    #get-started-button {
+      margin-top : 16px;
+      width: 100%;
+      padding: 21px 24px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}

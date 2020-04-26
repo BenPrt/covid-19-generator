@@ -1,0 +1,23 @@
+@import 'variables.scss';
+
+.SettingsContent {
+  .settings-section {
+    padding: 16px 0px;
+    border-bottom: 1px solid $light-grey;
+    .settings-center-label {
+      display: flex;
+      align-items: center;
+    }
+
+    .settings-section-label {
+      font-weight: 500;
+      font-size: 14px;
+      color: $dark-grey;
+    }
+    .settings-section-content {
+      display : flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}

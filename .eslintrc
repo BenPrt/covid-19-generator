@@ -1,0 +1,8 @@
+{
+	"env": {},
+	"extends": "fbjs",
+	"parserOptions": {},
+	"rules": {
+		"max-len": [2, 100, 4, { "ignoreUrls": true }]
+	}
+}

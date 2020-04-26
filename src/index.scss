@@ -1,12 +1,12 @@
-@import "~bootstrap/scss/bootstrap";
+@import '~bootstrap/scss/bootstrap';
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  position: fixed;
+  width: 100vw;
 }
 
 code {
@@ -14,10 +14,20 @@ code {
     monospace;
 }
 
+input[type='date']::-webkit-inner-spin-button,
+input[type='date']::-webkit-outer-spin-button,
+input[type='time']::-webkit-inner-spin-button,
+input[type='time']::-webkit-outer-spin-button,
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.unstyled::-webkit-inner-spin-button,
+.unstyled::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
 }
 
 p {

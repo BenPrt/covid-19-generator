@@ -1,0 +1,25 @@
+@import 'variables.scss';
+
+.SettingsContent {
+  .settings-section {
+    padding: 16px 0px;
+    border-bottom: 1px solid $light-grey;
+    .settings-center-label {
+      display: flex;
+      align-items: center;
+    }
+
+    .settings-label {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: $dark-grey;
+    }
+  }
+  .settings-content-container{
+    padding : 32px 0px;
+  }
+  #settings-delete-button{
+    margin-top : 24px;
+  }
+}

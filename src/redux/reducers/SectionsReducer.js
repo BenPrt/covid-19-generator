@@ -10,10 +10,24 @@ export default (state = initialState, action) => {
   switch (action.type) {
     // Setting the now section toggle value
     case ActionTypes.toggleNowSection:
-      return { ...state, isNowSectionDisplayed: action.toggleValue };
+      return {
+        ...state,
+        isNowSectionDisplayed: action.toggleValue,
+        isLaterSectionDisplayed:
+          action.toggleValue && state.isLaterSectionDisplayed
+            ? false
+            : state.isLaterSectionDisplayed,
+      };
     // Setting the later section toggle value
     case ActionTypes.toggleLaterSection:
-      return { ...state, isLaterSectionDisplayed: action.toggleValue };
+      return {
+        ...state,
+        isNowSectionDisplayed:
+          action.toggleValue && state.isNowSectionDisplayed
+            ? false
+            : state.isNowSectionDisplayed,
+        isLaterSectionDisplayed: action.toggleValue,
+      };
     default:
       return state;
   }

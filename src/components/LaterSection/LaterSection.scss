@@ -26,7 +26,7 @@
 
     .later-section-header-icon{
       transform : rotate(0deg);  
-      transition : transform 400ms ease-in;
+      transition : transform 400ms linear;
 
       &.opened{
         transform : rotate(180deg);  

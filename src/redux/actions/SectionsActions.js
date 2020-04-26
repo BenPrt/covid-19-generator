@@ -17,6 +17,7 @@ export const toggleLaterSection = (toggleValue) => {
   };
 };
 
+// - Thunk dispatching the right action to display the according section
 export const displaySection = (section, toggleValue) => {
   return (dispatch) => {
     switch (section) {

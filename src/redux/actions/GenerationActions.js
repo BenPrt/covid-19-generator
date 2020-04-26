@@ -1,5 +1,5 @@
 import ActionTypes from 'redux/ActionTypes';
-import CertificateGenerator from 'CertificateGenerator';
+import CertificateGenerator from 'utils/CertificateGenerator';
 
 // - Action dispatched to set the outing date value
 export const setOutingDateValue = (value) => {
@@ -24,6 +24,7 @@ export const resetOutingValue = () => {
   };
 };
 
+// Thunk called to download the generated PDF certificate
 export const generatePDFFile = (reason) => {
   return (dispatch, getState) => {
     const state = getState();

@@ -1,9 +1,10 @@
-import pdfBase from './ressources/certificate.pdf';
+import pdfBase from 'ressources/certificate.pdf';
 import { PDFDocument, StandardFonts } from 'pdf-lib';
 import QRCode from 'qrcode';
 import moment from 'moment';
 
 class CertificateGenerator {
+  // Function encapsulating PDF creation, formatting and download
   downloadPdf = async (values) => {
     const { outingDate, outingTime } = values;
     const pdfBlob = await this.generatePdf(values);
@@ -15,6 +16,7 @@ class CertificateGenerator {
     );
   };
 
+  // Function creating a downloadable tag making the PDF file downloadable
   downloadBlob = (blob, fileName) => {
     const link = document.createElement('a');
     var url = URL.createObjectURL(blob);
@@ -24,6 +26,8 @@ class CertificateGenerator {
     link.click();
   };
 
+  // Function generating a new PDF file based on the 'ressources/certificate.pdf' file and writing
+  // according informations
   generatePdf = async (values) => {
     let {
       name,
@@ -133,7 +137,9 @@ class CertificateGenerator {
     return new Blob([pdfBytes], { type: 'application/pdf' });
   };
 
-  generateQR = async (text) => {
+  // Function generation the QrCode from the passed-in parameter data
+  // eslint-disable-next-line consistent-return
+  generateQR = async (data) => {
     try {
       var opts = {
         errorCorrectionLevel: 'M',
@@ -141,12 +147,13 @@ class CertificateGenerator {
         quality: 0.92,
         margin: 1,
       };
-      return await QRCode.toDataURL(text, opts);
+      return await QRCode.toDataURL(data, opts);
     } catch (err) {
       console.error(err);
     }
   };
 
+  // Function formatting date from "YYYY-MM-DD" format to "DD/MM/YYYY"
   formatDate= (date) => {
     return moment(date, 'YYYY-MM-DD').format('DD/MM/YYYY');
   }

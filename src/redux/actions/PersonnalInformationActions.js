@@ -1,7 +1,7 @@
 import ActionTypes from 'redux/ActionTypes';
 import { initSplashScreenStatus } from './SplashScreenActions';
 
-// - Action and thunk called to update name value
+// - Action and thunks called to update name value
 export const setNameValue = (name) => {
   return {
     type: ActionTypes.setNameValue,
@@ -22,7 +22,7 @@ export const fetchNameValue = () => {
   };
 };
 
-// - Action and thunk called to update surname value
+// - Action and thunks called to update surname value
 export const setSurnameValue = (surname) => {
   return {
     type: ActionTypes.setSurnameValue,
@@ -43,7 +43,7 @@ export const fetchSurnameValue = () => {
   };
 };
 
-// - Action and thunk called to update birthday value
+// - Action and thunks called to update birthday value
 export const setBirthdayValue = (birthday) => {
   return {
     type: ActionTypes.setBirthdayValue,
@@ -64,7 +64,7 @@ export const fetchBirthdayValue = () => {
   };
 };
 
-// - Action and thunk called to update birthday value
+// - Action and thunks called to update birthday value
 export const setBirthPlaceValue = (birthPlace) => {
   return {
     type: ActionTypes.setBirthPlaceValue,
@@ -85,7 +85,7 @@ export const fetchBirthPlaceValue = () => {
   };
 };
 
-// - Action and thunk called to update address value
+// - Action and thunks called to update address value
 export const setAddressValue = (address) => {
   return {
     type: ActionTypes.setAddressValue,
@@ -106,7 +106,7 @@ export const fetchAddressValue = () => {
   };
 };
 
-// - Action and thunk called to update city value
+// - Action and thunks called to update city value
 export const setCityValue = (city) => {
   return {
     type: ActionTypes.setCityValue,
@@ -127,7 +127,7 @@ export const fetchCityValue = () => {
   };
 };
 
-// - Action and thunk called to update city value
+// - Action and thunks called to update city value
 export const setPostalCodeValue = (postalCode) => {
   return {
     type: ActionTypes.setPostalCodeValue,

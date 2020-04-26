@@ -9,7 +9,7 @@ import ReasonsList from 'ressources/ReasonsList';
 import './LaterSection.scss';
 import { displaySection } from 'redux/actions/SectionsActions';
 import ReasonGenerationButton from 'components/ReasonGenerationButton/ReasonGenerationButton';
-import { setOutingValue } from 'redux/actions/GenerationActions';
+import { setOutingDateValue, setOutingTimeValue } from 'redux/actions/GenerationActions';
 
 function LaterSection() {
   const dispatch = useDispatch();
@@ -17,14 +17,19 @@ function LaterSection() {
   const isLaterSectionDisplayed = useSelector(
     (state) => state.sectionsDisplayData.isLaterSectionDisplayed,
   );
-  const outingValue = useSelector((state) => state.generationData.outingTime);
+  const outingDateValue = useSelector((state) => state.generationData.outingDate);
+  const outingHourValue = useSelector((state) => state.generationData.outingTime);
 
   const handleLaterSectionToggle = () => {
     dispatch(displaySection('later', !isLaterSectionDisplayed));
   };
 
+  const handleOutingDateChange = (event) => {
+    dispatch(setOutingDateValue(event.target.value));
+  };
+
   const handleOutingHourChange = (event) => {
-    dispatch(setOutingValue(event.target.value));
+    dispatch(setOutingTimeValue(event.target.value));
   };
 
   return (
@@ -49,13 +54,23 @@ function LaterSection() {
       >
         <div className="later-section-section">
           <h3 className="later-section-content-subtitle">
-            Sélectionner votre heure de sortie :
+            Sélectionner vos date et heure de sortie :
           </h3>
-          <form noValidate>
+          <form id="later-form" noValidate>
             <TextField
-              id="time"
+              id="later-form-date-input"
+              type="date"
+              defaultValue={outingDateValue}
+              onChange={handleOutingDateChange.bind(this)}
+              onBlur={handleOutingDateChange.bind(this)}
+              InputLabelProps={{
+                shrink: true,
+              }}
+            />
+            <TextField
+              id="later-form-time-input"
               type="time"
-              defaultValue={outingValue}
+              defaultValue={outingHourValue}
               InputLabelProps={{
                 shrink: true,
               }}

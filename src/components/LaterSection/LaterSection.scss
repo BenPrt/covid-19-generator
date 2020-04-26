@@ -73,5 +73,15 @@
         line-height: 24px;
       }
     }
+    #later-form{
+      display : flex;
+      justify-content: space-evenly;
+    }
+    #later-form-date-input{
+      width : 130px;
+    }
+    #later-form-time-input{
+      margin-left : 16px;
+    }
   }
 }

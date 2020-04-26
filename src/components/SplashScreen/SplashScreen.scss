@@ -27,6 +27,7 @@
     background-color: #ffffff;
     width: 100%;
     height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     overflow-y: auto;
     left: 0;
     top: 0;
@@ -48,7 +49,6 @@
   }
   #splash-screen-title {
     margin-top : 40px;
-    margin-bottom : 16px;
     text-align : center;
   }
 }

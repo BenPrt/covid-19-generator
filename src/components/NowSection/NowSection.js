@@ -6,7 +6,7 @@ import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import ReasonsList from 'ressources/ReasonsList';
 
 import './NowSection.scss';
-import { toggleNowSection } from 'redux/actions/SectionsActions';
+import { displaySection } from 'redux/actions/SectionsActions';
 import ReasonGenerationButton from 'components/ReasonGenerationButton/ReasonGenerationButton';
 
 function NowSection() {
@@ -17,7 +17,7 @@ function NowSection() {
   );
 
   const handleNowSectionToggle = () => {
-    dispatch(toggleNowSection(!isNowSectionDisplayed));
+    dispatch(displaySection('now', !isNowSectionDisplayed));
   };
 
   return (

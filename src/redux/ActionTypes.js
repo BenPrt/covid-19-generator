@@ -17,6 +17,9 @@ export const ActionTypes = {
   // Sections display Actions
   toggleNowSection: 'TOGGLE_NOW_SECTION',
   toggleLaterSection: 'TOGGLE_LATER_SECTION',
+  // Certificate Generation Actions
+  setOutingValue: 'SET_OUTING_VALUE',
+  resetOutingValue: 'RESET_OUTING_VALUE',
 };
 
 export default ActionTypes;

@@ -4,6 +4,7 @@ import SettingsReducer from './SettingsReducer';
 import PersonnalInformationReducer from './PersonnalInformationReducer';
 import LoaderReducer from './LoaderReducer';
 import SectionsReducer from './SectionsReducer';
+import GenerationReducer from './GenerationReducer';
 
 export default combineReducers({
   loaderIsDisplayed: LoaderReducer,
@@ -11,4 +12,5 @@ export default combineReducers({
   settingsFrameIsDisplayed: SettingsReducer,
   personnalInformation: PersonnalInformationReducer,
   sectionsDisplayData: SectionsReducer,
+  generationData: GenerationReducer,
 });

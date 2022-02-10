@@ -18,7 +18,7 @@
     "bootstrap": "^4.4.1",
     "express": "^4.17.1",
     "moment": "^2.24.0",
-    "node-sass": "^4.14.0",
+    "node-sass": "^7.0.0",
     "pdf-lib": "^1.4.1",
     "qrcode": "^1.4.4",
     "react": "^16.13.1",
